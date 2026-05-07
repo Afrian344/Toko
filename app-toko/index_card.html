@@ -28,8 +28,46 @@
         </div>
     </div>
 
+    <!-- Modal Edit Barang -->
+    <div id="modal-edit" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-md border border-gray-200 p-6 w-full max-w-md mx-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Ubah Data Barang</h2>
+            <form id="form-edit-barang" class="space-y-4">
+                <input type="hidden" id="edit_id" name="id">
+                <div>
+                    <label for="edit_nama_barang" class="block text-sm font-medium text-gray-700">Nama Barang</label>
+                    <input type="text" id="edit_nama_barang" name="nama_barang" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-400 focus:ring focus:ring-orange-200 focus:ring-opacity-50">
+                </div>
+
+                <div>
+                    <label for="edit_harga" class="block text-sm font-medium text-gray-700">Harga</label>
+                    <input type="number" id="edit_harga" name="harga" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-400 focus:ring focus:ring-orange-200 focus:ring-opacity-50">
+                </div>
+
+                <div>
+                    <label for="edit_stok" class="block text-sm font-medium text-gray-700">Stok</label>
+                    <input type="number" id="edit_stok" name="stok" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-400 focus:ring focus:ring-orange-200 focus:ring-opacity-50">
+                </div>
+
+                <div class="flex justify-end gap-3 mt-6">
+                    <button type="button" onclick="tutupModalEdit()"
+                        class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md shadow-sm hover:bg-gray-200 transition-colors font-medium">
+                        Batal
+                    </button>
+                    <button type="submit"
+                        class="px-4 py-2 bg-blue-500 text-white rounded-md shadow hover:bg-blue-600 transition-colors font-medium">
+                        Simpan
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Script JavaScript -->
-    <script src="app.js?v=2"></script>
+    <script src="app.js?v=3"></script>
 </body>
 
 </html>
